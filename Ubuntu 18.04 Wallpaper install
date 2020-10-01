@@ -1,0 +1,19 @@
+sudo apt-get install build-essential
+mkdir ~/wallpaper
+cd ~/wallpaper
+wget https://www.imagemagick.org/download/ImageMagick.tar.gz
+tar xvzf ImageMagick.tar.gz
+cd ImageMagick-7.0.x-xx/
+./configure
+make
+sudo make install
+sudo ldconfig /usr/local/lib
+sudo mkdir /usr/share/backgrounds/backup/
+cd /usr/share/backgrounds
+sudo cp warty-final-ubuntu.png to /usr/share/backgrounds/backup/
+add wallpaper.sh to ~/wallpaper/ #edit user name is file path
+chmod +x wallpaper.sh
+sudo apt install net-tools
+sudo apt install gawk
+sudo chown -R user:root /usr/share/backgrounds/ #edit user
+
